@@ -15,7 +15,7 @@ module Guard
     def compile_handlebars file
       content = File.new(file).read
       begin
-        com = "handlebars #{file}"
+        com = "handlebars --amd #{file}"
         result = `#{com}`
         result
       rescue StandardError => error
